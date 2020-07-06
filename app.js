@@ -1,10 +1,10 @@
 // import functions and grab DOM elements
 
-const myButton = document.getElementById(button);
+const myButton = document.getElementById('button');
 console.log(myButton);
 
-const score = document.getElementById(Result);
-console.log(score);
+const resultSpan = document.getElementById('result');
+console.log(resultSpan);
 // initialize state
 
 // set event listeners to update state and DOM
@@ -26,5 +26,22 @@ myButton.addEventListener('click', () => {
 
     const answer3 = prompt('Are unicorns real?');
      //Answer: yes
+    
+    let score = 0;
+
+    if (countsAsAYes(answer1)) {
+        score++;
+    }
+
+    if (countsAsAYes(answer2)) {
+        score++;
+    }
+
+    if (!countsAsAYes(answer3)) {
+        score++;
+    }
+    
+    console.log(score);
+    resultSpan.textContent = name + score;
 });
 
