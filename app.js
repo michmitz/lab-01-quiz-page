@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import { countsAsAYes } from './unicornUtils.js';
 
 const myButton = document.getElementById('button');
 console.log(myButton);
@@ -33,15 +34,15 @@ myButton.addEventListener('click', () => {
         score++;
     }
 
-    if (countsAsAYes(answer2)) {
+    if (!countsAsAYes(answer2)) {
         score++;
     }
 
-    if (!countsAsAYes(answer3)) {
+    if (countsAsAYes(answer3)) {
         score++;
     }
     
     console.log(score);
-    resultSpan.textContent = name + score;
+    resultSpan.textContent = name + ' Quiz Score: ' + score;
 });
 
