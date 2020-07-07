@@ -41,8 +41,30 @@ myButton.addEventListener('click', () => {
     if (countsAsAYes(answer3)) {
         score++;
     }
-    
+
     console.log(score);
-    resultSpan.textContent = name + ' Quiz Score: ' + score;
+
+    let response = `You scored ${score} out of 3 points!`;
+
+    if (score === 3) {
+        return response += 'You got a perfect score!';
+    };
+    
+    resultSpan.textContent = response;
+    
+    
+    
+    /* Code from example project
+    
+    let response = 'Your name is ' + name;
+
+    if (correctAnswers >= 1) {
+        response += ' And you know your JavaScript!';
+    } else {
+        response += ' And you need to brush up on getting to know JavaScript';
+    }
+    result.textContent = response;
+    
+    */
 });
 
