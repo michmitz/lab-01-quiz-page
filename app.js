@@ -44,11 +44,7 @@ myButton.addEventListener('click', () => {
 
     console.log(score);
 
-    let response = `You scored ${score} out of 3 points!`;
-
-    if (score === 3) {
-        return response += 'You got a perfect score!';
-    };
+    let response = `${name}! You scored ${score} out of 3 points!`;
     
     resultSpan.textContent = response;
     
@@ -67,4 +63,5 @@ myButton.addEventListener('click', () => {
     
     */
 });
+
 

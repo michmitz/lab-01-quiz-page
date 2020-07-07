@@ -23,7 +23,10 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-image: url(../pinkbackground.jpg);
 }
+
+
 
 section {
     background-color: var(--color5);
@@ -37,7 +40,11 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 2px var(--color3);
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Fondamento', cursive;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 header {
@@ -62,8 +69,9 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    font-weight: bold;
     font-family: 'Fondamento', cursive;
+    text-align: center;
+
 }
 
 .gutter-right {
@@ -84,9 +92,17 @@ content {
 
 p {
     margin: var(--gutter);
+    text-align: center;
 }
 
-button {
+ol, ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+#result {
+    margin-top: 20px;
+    font-family: 'Fondamento', cursive;
 }
   
 footer {
@@ -121,4 +137,16 @@ footer {
 
   .title {
       color: pink;
+  }
+
+  button {
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 25px 25px 25px 25px;
   }
